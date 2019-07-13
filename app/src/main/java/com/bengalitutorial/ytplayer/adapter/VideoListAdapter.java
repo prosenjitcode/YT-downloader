@@ -44,7 +44,6 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.VH> 
         Picasso.get().load(video.getSnippet().getThumbnails().getMedium().getUrl())
                 .into(holder.imageView);
         holder.title.setText(video.getSnippet().getTitle());
-        holder.desc.setText(video.getSnippet().getDescription());
         holder.chTitle.setText(video.getSnippet().getChannelTitle());
 
         holder.imageView.setOnClickListener(new View.OnClickListener() {
@@ -64,15 +63,14 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.VH> 
 
     public class VH extends RecyclerView.ViewHolder {
 
-        TextView title, desc, chTitle;
+        TextView title, chTitle;
         ImageView imageView;
 
         public VH(@NonNull View itemView) {
             super(itemView);
-            imageView = (ImageView) itemView.findViewById(R.id.videoThumbnail);
-            title = (TextView) itemView.findViewById(R.id.titleView);
-            desc = (TextView) itemView.findViewById(R.id.descriptionView);
-            chTitle = (TextView) itemView.findViewById(R.id.channelTitleView);
+            imageView = itemView.findViewById(R.id.videoThumbnail);
+            title =  itemView.findViewById(R.id.titleView);
+            chTitle =  itemView.findViewById(R.id.channelTitleView);
         }
     }
 }

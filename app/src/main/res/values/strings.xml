@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">YT Player</string>
+    <string name="tumbnail">image</string>
 </resources>
