@@ -8,14 +8,15 @@ import retrofit2.http.Query;
 
 public interface ServiceInterface {
 
-    @GET("search?")
+    @GET("search/")
     Call<MovieDetails> getAllMovies(@Query("part") String part,
                                     @Query("maxResults") String maxResults,
                                     @Query("q") String q,
+                                    @Query("type") String type,
                                     @Query("key") String api_key
                                     );
 
-    @GET("search?")
+    @GET("search/")
     Call<MovieDetails> getReletedMovies(@Query("part") String part,
                                     @Query("maxResults") String maxResults,
                                     @Query("relatedToVideoId") String relatedToVideoId,

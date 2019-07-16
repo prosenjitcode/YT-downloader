@@ -11,6 +11,30 @@
 
     </com.google.android.youtube.player.YouTubePlayerView>
 
+    <TextView
+        android:id="@+id/titleV"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:padding="4dp"
+        android:layout_marginLeft="8dp" />
+    <TextView
+        android:id="@+id/channelV"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginStart="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginLeft="8dp" />
+
+    <View
+        android:layout_marginTop="4dp"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rList"
         android:layout_width="match_parent"
